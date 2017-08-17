@@ -1,9 +1,12 @@
 const search = (twit, queryString) => {
   return new Promise((resolve, reject) => {
     twit.get('search/tweets', queryString, (err, data) => {
-      if (err) return reject(err)
+      if (err) {
+        reject(err)
+        return
+      }
 
-      return resolve(data)
+      resolve(data)
     })
   })
 }
