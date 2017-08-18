@@ -1,6 +1,5 @@
 const randomNumber = (data) => {
-  const index = Math.floor(Math.random() * data.length)
-  return data[index]
+  return Math.floor(Math.random() * data.length)
 }
 
 module.exports = randomNumber
