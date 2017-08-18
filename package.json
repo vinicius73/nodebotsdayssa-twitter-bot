@@ -4,7 +4,7 @@
   "description": "Hi guys, I'm a Twitter bot for #nodebotssa",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --named nodebotssa-twitter-bot",
+    "start": "pm2 start index.js --watch --name nodebotssa-twitter-bot",
     "start-dev": "jest --coverage && nodemon index.js",
     "test": "jest --coverage"
   },
