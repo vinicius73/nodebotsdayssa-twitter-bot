@@ -1,5 +1,3 @@
-const randomNumber = (data) => {
-  return Math.floor(Math.random() * data.length)
-}
+const randomNumber = (length) => Math.floor(Math.random() * length)
 
 module.exports = randomNumber

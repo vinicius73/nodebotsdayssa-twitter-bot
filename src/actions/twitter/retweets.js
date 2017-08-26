@@ -2,7 +2,7 @@ const {randomNumber} = require('../../libs')
 const searchTweets = require('./search_tweets')
 
 const getRetweetId = (data) => {
-  const indexNumber = randomNumber(data)
+  const indexNumber = randomNumber(data.length)
   return data[indexNumber].id_str
 }
 
