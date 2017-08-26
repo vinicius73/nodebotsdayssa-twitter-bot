@@ -19,16 +19,24 @@ const retweet = (twit, data) => {
         return
       }
 
-      console.log(`UHUU!! I did a retweet: ${res.id_str} ${res.created_at} ${res.text}`)
       resolve(res)
     })
   })
 }
 
-const runRetweet = (twit, queryStrings) => {
-  searchTweets(twit, queryStrings)
-  .then(result => retweet(twit, result.statuses))
-  .catch(err => console.log(err))
+const searchAndRetweet = (twit, queryStrings) => {
+  return searchTweets(twit, queryStrings)
+    .then(result => {
+      retweet(twit, result.statuses)
+        .then(rt => {
+          console.log(`UHUU!! I did a retweet: ${rt.id_str} ${rt.created_at} ${rt.text}`)
+          return Promise.resolve(rt)
+        })
+    })
+    .catch(err => {
+      console.log(err, new Date())
+      return Promise.reject(err)
+    })
 }
 
-module.exports = runRetweet
+module.exports = searchAndRetweet

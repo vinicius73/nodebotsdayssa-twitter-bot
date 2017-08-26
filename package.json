@@ -4,9 +4,10 @@
   "description": "Hi guys, I'm a Twitter bot for #nodebotssa",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --watch --name nodebotssa-twitter-bot",
+    "preinstall": "npm i -g pm2",
+    "start": "pm2 start index.js --watch --name nodebotssa",
     "start-dev": "nodemon index.js",
-    "test": ""
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,12 @@
   "homepage": "https://github.com/NodeBotsSalvador/nodebotsdayssa-twitter-bot#readme",
   "dependencies": {
     "dotenv": "^4.0.0",
+    "lodash": "^4.17.4",
     "pm2": "^2.6.1",
     "twit": "^2.2.9"
   },
   "devDependencies": {
+    "ava": "^0.22.0",
     "nodemon": "^1.11.0",
     "standard": "^10.0.3"
   }
