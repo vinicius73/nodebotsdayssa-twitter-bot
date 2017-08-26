@@ -9,13 +9,13 @@ const twit = new Twit(config.twitter)
 const TIME_WAIT_FOR_RETWEET_MILESECONDS = 900000
 
 const runRetweet = () => {
-  console.log('running retweet');
+  console.log('running retweet')
   retweet(twit, config.queryStrings.retweet)
     .then(() => {
-      console.log('finish retweet');
+      console.log('finish retweet')
     })
     .catch(() => {
-      console.log('fail retweet');
+      console.log('fail retweet')
     })
 }
 
