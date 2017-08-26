@@ -1,8 +1,8 @@
 const test = require('ava')
 const _ = require('lodash')
 
-const searchTweets = require('../../../actions/twitter/search_tweets')
-const resultMocked = require('../../mock/search_mock')
+const searchTweets = require('../actions/twitter/search_tweets')
+const resultMocked = require('./mock/search_mock')
 
 test('Should execute a search and return result', t => {
   const queryString = {
