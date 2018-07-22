@@ -1,5 +1,5 @@
 # [NodeBotSSA Twitter Bot](https://twitter.com/nodebotssa)
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/vinicius73/nodebotsdayssa-twitter-bot.svg)](https://greenkeeper.io/)
 
 Helping Developers and share communicate in Twitter about #nodejs #nodebots #nodebotssa #johnnyfivejs.
 
